@@ -252,7 +252,7 @@ function generatePDF($id_surat, $download = true) {
     $dompdf->render();
 
     if ($download) {
-        $filename = 'Surat_Bebas_Perpustakaan_' . $data['nim'] . '.pdf';
+        $filename = 'Surat_Bebas_Pustaka_' . $data['nim'] . '.pdf';
         $dompdf->stream($filename, array('Attachment' => true));
     } else {
         return $dompdf->output();
@@ -294,8 +294,8 @@ function kirimEmailSurat($id_surat) {
     $body .= "Content-Type: text/plain; charset=UTF-8\r\n\r\n";
     $body .= $message . "\r\n\r\n";
     $body .= "--boundary123\r\n";
-    $body .= "Content-Type: application/pdf; name=\"Surat_Bebas_Perpustakaan.pdf\"\r\n";
-    $body .= "Content-Disposition: attachment; filename=\"Surat_Bebas_Perpustakaan.pdf\"\r\n";
+    $body .= "Content-Type: application/pdf; name=\"Surat_Bebas_Pustaka.pdf\"\r\n";
+    $body .= "Content-Disposition: attachment; filename=\"Surat_Bebas_Pustaka.pdf\"\r\n";
     $body .= "Content-Transfer-Encoding: base64\r\n\r\n";
     $body .= chunk_split(base64_encode($pdf_content)) . "\r\n";
     $body .= "--boundary123--";

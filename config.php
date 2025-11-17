@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root'); // Ganti dengan username database Anda
 define('DB_PASS', ''); // Ganti dengan password database Anda
-define('DB_NAME', 'bebas_perpustakaan');
+define('DB_NAME', 'bebas_pustaka');
 
 // Koneksi Database
 function connectDB() {
@@ -38,7 +38,7 @@ function verifyCSRFToken($token) {
 }
 
 // Secret key untuk QR code validation
-define('QR_SECRET', 'bebas_perpustakaan_secret_key_2024');
+define('QR_SECRET', 'bebas_pustaka_secret_key_2024');
 
 // Mulai session jika belum dimulai
 if (session_status() == PHP_SESSION_NONE) {

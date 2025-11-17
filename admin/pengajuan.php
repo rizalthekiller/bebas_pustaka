@@ -209,6 +209,8 @@ $prodi = getProdiByFakultas(null);
         .sidebar .nav-link.active { color: white; background: #0d6efd; }
         .table-responsive { border-radius: 10px; overflow: hidden; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
         .status-badge { font-size: 0.8rem; }
+        .dropdown-menu { z-index: 1050; min-width: 180px; }
+        .dropdown { position: static; }
     </style>
 </head>
 <body>
@@ -584,6 +586,38 @@ $prodi = getProdiByFakultas(null);
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.js"></script>
+    <script>
+        // Fix dropdown positioning for single row tables
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure dropdowns work properly
+            var dropdowns = document.querySelectorAll('.dropdown-toggle');
+            dropdowns.forEach(function(dropdown) {
+                dropdown.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var menu = this.nextElementSibling;
+                    if (menu && menu.classList.contains('dropdown-menu')) {
+                        // Toggle visibility
+                        var isVisible = menu.classList.contains('show');
+                        // Hide all other dropdowns first
+                        document.querySelectorAll('.dropdown-menu.show').forEach(function(m) {
+                            m.classList.remove('show');
+                        });
+                        // Toggle current dropdown
+                        if (!isVisible) {
+                            menu.classList.add('show');
+                        }
+                    }
+                });
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function() {
+                document.querySelectorAll('.dropdown-menu.show').forEach(function(menu) {
+                    menu.classList.remove('show');
+                });
+            });
+        });
+    </script>
     <script>
         function viewDetail(id) {
             fetch('get_detail_pengajuan.php?id=' + id)
