@@ -1,0 +1,47 @@
+<?php
+// Konfigurasi Database
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root'); // Ganti dengan username database Anda
+define('DB_PASS', ''); // Ganti dengan password database Anda
+define('DB_NAME', 'bebas_perpustakaan');
+
+// Koneksi Database
+function connectDB() {
+    try {
+        $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        return $pdo;
+    } catch (PDOException $e) {
+        die("Koneksi database gagal: " . $e->getMessage());
+    }
+}
+
+// Fungsi untuk membersihkan input (untuk penyimpanan database)
+function cleanInput($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    return $data;
+}
+
+// Fungsi untuk generate CSRF token
+function generateCSRFToken() {
+    if (empty($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+    return $_SESSION['csrf_token'];
+}
+
+// Fungsi untuk verifikasi CSRF token
+function verifyCSRFToken($token) {
+    return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
+}
+
+// Secret key untuk QR code validation
+define('QR_SECRET', 'bebas_perpustakaan_secret_key_2024');
+
+// Mulai session jika belum dimulai
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
