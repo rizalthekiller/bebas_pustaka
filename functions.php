@@ -1,4 +1,6 @@
 <?php
+define('BASE_PATH', dirname(__FILE__) . '/');
+
 // Fungsi untuk cek apakah admin sudah login
 function isAdminLoggedIn() {
     return isset($_SESSION['admin_id']) && !empty($_SESSION['admin_id']);
@@ -173,7 +175,7 @@ function cekNomorSuratDuplikat($nomor_surat, $tahun) {
 
 // Fungsi generate PDF surat
 function generatePDF($id_surat, $download = true) {
-    require_once '../vendor/autoload.php';
+    require_once BASE_PATH . 'vendor/autoload.php';
 
     $pdo = connectDB();
 
@@ -222,8 +224,8 @@ function generatePDF($id_surat, $download = true) {
 
 
     // QR Code path
-    $qr_path = '../uploads/qr_codes/' . $data['qr_code'];
-    if (file_exists($qr_path)) {
+    $qr_path = BASE_PATH . 'uploads/qr_codes/' . $data['qr_code'];
+    if (!empty($data['qr_code']) && file_exists($qr_path) && is_file($qr_path)) {
         $qr_data = 'data:image/png;base64,' . base64_encode(file_get_contents($qr_path));
         $replacements['{{QR_CODE}}'] = $qr_data;
     } else {
@@ -231,8 +233,8 @@ function generatePDF($id_surat, $download = true) {
     }
 
     // Kop surat
-    $kop_path = '../uploads/kop_surat/' . $template['kop_surat'];
-    if (file_exists($kop_path)) {
+    $kop_path = BASE_PATH . 'uploads/kop_surat/' . $template['kop_surat'];
+    if (!empty($template['kop_surat']) && file_exists($kop_path) && is_file($kop_path)) {
         $kop_data = 'data:image/png;base64,' . base64_encode(file_get_contents($kop_path));
         $replacements['{{KOP_SURAT}}'] = $kop_data;
     } else {
@@ -316,7 +318,7 @@ function getPengaturanSurat() {
 
 // Fungsi kirim email notifikasi persetujuan
 function kirimEmailPersetujuan($email, $nama) {
-    require_once '../vendor/autoload.php';
+    require_once BASE_PATH . 'vendor/autoload.php';
     try {
         $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 
@@ -360,7 +362,7 @@ function kirimEmailPersetujuan($email, $nama) {
 
 // Fungsi kirim email notifikasi penolakan
 function kirimEmailPenolakan($email, $nama, $alasan) {
-    require_once '../vendor/autoload.php';
+    require_once BASE_PATH . 'vendor/autoload.php';
     try {
         $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 

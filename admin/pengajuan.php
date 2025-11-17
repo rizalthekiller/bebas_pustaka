@@ -251,7 +251,7 @@ $prodi = getProdiByFakultas(null);
         .sidebar .nav-link { color: rgba(255,255,255,.75); padding: 0.75rem 1rem; }
         .sidebar .nav-link:hover { color: white; background: rgba(255,255,255,.1); }
         .sidebar .nav-link.active { color: white; background: #0d6efd; }
-        .table-responsive { border-radius: 10px; overflow: hidden; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        .table-responsive { border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); padding-bottom: 200px; }
         .status-badge { font-size: 0.8rem; }
     </style>
 </head>

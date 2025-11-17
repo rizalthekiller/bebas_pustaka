@@ -1,9 +1,9 @@
 <?php
 // Konfigurasi Database
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root'); // Ganti dengan username database Anda
-define('DB_PASS', ''); // Ganti dengan password database Anda
-define('DB_NAME', 'bebas_pustaka');
+define('DB_HOST', 'bebaspustaka.libuinsi.my.id');
+define('DB_USER', 'libuinsi_bebas_pustaka'); // Ganti dengan username database Anda
+define('DB_PASS', 'Perpus01'); // Ganti dengan password database Anda
+define('DB_NAME', 'libuinsi_bebas_pustaka');
 
 // Koneksi Database
 function connectDB() {

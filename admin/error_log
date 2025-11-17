@@ -1,0 +1,88 @@
+[17-Nov-2025 14:46:18 UTC] PHP Fatal error:  Uncaught Error: Class "Dompdf\Adapter\CPDF" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php:56
+Stack trace:
+#0 /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/Dompdf.php(274): Dompdf\CanvasFactory::get_instance()
+#1 /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php(245): Dompdf\Dompdf->__construct()
+#2 /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php(27): generatePDF()
+#3 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php on line 56
+[17-Nov-2025 14:46:25 UTC] PHP Fatal error:  Uncaught Error: Class "Dompdf\Adapter\CPDF" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php:56
+Stack trace:
+#0 /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/Dompdf.php(274): Dompdf\CanvasFactory::get_instance()
+#1 /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php(245): Dompdf\Dompdf->__construct()
+#2 /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php(27): generatePDF()
+#3 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php on line 56
+[17-Nov-2025 14:47:18 UTC] PHP Fatal error:  Uncaught Error: Class "Endroid\QrCode\Builder\Builder" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php:246
+Stack trace:
+#0 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php on line 246
+[17-Nov-2025 14:48:23 UTC] PHP Notice:  file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory in /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php on line 227
+[17-Nov-2025 14:48:23 UTC] PHP Fatal error:  Uncaught Error: Class "Dompdf\Adapter\CPDF" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php:56
+Stack trace:
+#0 /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/Dompdf.php(274): Dompdf\CanvasFactory::get_instance()
+#1 /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php(245): Dompdf\Dompdf->__construct()
+#2 /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php(27): generatePDF()
+#3 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php on line 56
+[17-Nov-2025 14:48:26 UTC] PHP Notice:  file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory in /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php on line 227
+[17-Nov-2025 14:48:26 UTC] PHP Fatal error:  Uncaught Error: Class "Dompdf\Adapter\CPDF" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php:56
+Stack trace:
+#0 /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/Dompdf.php(274): Dompdf\CanvasFactory::get_instance()
+#1 /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php(245): Dompdf\Dompdf->__construct()
+#2 /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php(27): generatePDF()
+#3 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php on line 56
+[17-Nov-2025 14:48:27 UTC] PHP Notice:  file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory in /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php on line 227
+[17-Nov-2025 14:48:27 UTC] PHP Fatal error:  Uncaught Error: Class "Dompdf\Adapter\CPDF" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php:56
+Stack trace:
+#0 /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/Dompdf.php(274): Dompdf\CanvasFactory::get_instance()
+#1 /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php(245): Dompdf\Dompdf->__construct()
+#2 /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php(27): generatePDF()
+#3 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php on line 56
+[17-Nov-2025 14:51:12 UTC] PHP Notice:  file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory in /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php on line 227
+[17-Nov-2025 14:51:12 UTC] PHP Fatal error:  Uncaught Error: Class "Dompdf\Adapter\CPDF" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php:56
+Stack trace:
+#0 /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/Dompdf.php(274): Dompdf\CanvasFactory::get_instance()
+#1 /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php(245): Dompdf\Dompdf->__construct()
+#2 /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php(27): generatePDF()
+#3 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php on line 56
+[17-Nov-2025 14:51:22 UTC] PHP Notice:  file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory in /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php on line 227
+[17-Nov-2025 14:51:22 UTC] PHP Fatal error:  Uncaught Error: Class "Dompdf\Adapter\CPDF" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php:56
+Stack trace:
+#0 /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/Dompdf.php(274): Dompdf\CanvasFactory::get_instance()
+#1 /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php(245): Dompdf\Dompdf->__construct()
+#2 /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php(27): generatePDF()
+#3 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php on line 56
+[17-Nov-2025 14:51:25 UTC] PHP Notice:  file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory in /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php on line 227
+[17-Nov-2025 14:51:25 UTC] PHP Fatal error:  Uncaught Error: Class "Dompdf\Adapter\CPDF" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php:56
+Stack trace:
+#0 /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/Dompdf.php(274): Dompdf\CanvasFactory::get_instance()
+#1 /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php(245): Dompdf\Dompdf->__construct()
+#2 /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php(27): generatePDF()
+#3 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php on line 56
+[17-Nov-2025 15:02:48 UTC] PHP Fatal error:  Uncaught Error: Class "Dompdf\Adapter\CPDF" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php:56
+Stack trace:
+#0 /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/Dompdf.php(274): Dompdf\CanvasFactory::get_instance()
+#1 /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php(247): Dompdf\Dompdf->__construct()
+#2 /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php(27): generatePDF()
+#3 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php on line 56
+[17-Nov-2025 15:02:51 UTC] PHP Fatal error:  Uncaught Error: Class "Dompdf\Adapter\CPDF" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php:56
+Stack trace:
+#0 /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/Dompdf.php(274): Dompdf\CanvasFactory::get_instance()
+#1 /home/libuinsi/bebaspustaka.libuinsi.my.id/functions.php(247): Dompdf\Dompdf->__construct()
+#2 /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php(27): generatePDF()
+#3 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/vendor/dompdf/dompdf/src/CanvasFactory.php on line 56
+[17-Nov-2025 15:03:04 UTC] PHP Fatal error:  Uncaught Error: Class "Endroid\QrCode\Builder\Builder" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php:246
+Stack trace:
+#0 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php on line 246
+[17-Nov-2025 15:03:37 UTC] PHP Fatal error:  Uncaught Error: Class "Endroid\QrCode\Builder\Builder" not found in /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php:294
+Stack trace:
+#0 {main}
+  thrown in /home/libuinsi/bebaspustaka.libuinsi.my.id/admin/surat.php on line 294
