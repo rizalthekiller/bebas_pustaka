@@ -37,6 +37,16 @@ function verifyCSRFToken($token) {
     return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
 }
 
+// Base URL untuk aplikasi (sesuaikan dengan instalasi Anda)
+$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+$host = $_SERVER['HTTP_HOST'];
+$scriptName = $_SERVER['SCRIPT_NAME'];
+$basePath = str_replace('/index.php', '', $scriptName);
+$basePath = str_replace('/admin/', '', $basePath);
+$basePath = str_replace('/config.php', '', $basePath);
+
+define('BASE_URL', $protocol . '://' . $host . $basePath);
+
 // Secret key untuk QR code validation
 define('QR_SECRET', 'bebas_pustaka_secret_key_2024');
 

@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 
     // Generate QR code yang mengarah ke halaman verifikasi dengan validasi
     $hash = hash('sha256', $id_surat . QR_SECRET);
-    $qrData = 'https://' . $_SERVER['HTTP_HOST'] . '/bebas_pustaka/verifikasi_surat.php?id=' . $id_surat . '&hash=' . $hash;
+    $qrData = BASE_URL . '/verifikasi_surat.php?id=' . $id_surat . '&hash=' . $hash;
 
     try {
         $qrCode = Endroid\QrCode\Builder\Builder::create()
@@ -203,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 
         // Generate QR code yang mengarah ke halaman verifikasi dengan validasi
         $hash = hash('sha256', $id_surat . QR_SECRET);
-        $qrData = 'https://' . $_SERVER['HTTP_HOST'] . '/bebas_pustaka/verifikasi_surat.php?id=' . $id_surat . '&hash=' . $hash;
+        $qrData = BASE_URL . '/verifikasi_surat.php?id=' . $id_surat . '&hash=' . $hash;
 
         try {
             $qrCode = Endroid\QrCode\Builder\Builder::create()
@@ -262,7 +262,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 
         // Generate QR code yang mengarah ke halaman verifikasi dengan validasi
         $hash = hash('sha256', $id_surat . QR_SECRET);
-        $qrData = 'http://' . $_SERVER['HTTP_HOST'] . '/bebas_pustaka/verifikasi_surat.php?id=' . $id_surat . '&hash=' . $hash;
+        $qrData = BASE_URL . '/verifikasi_surat.php?id=' . $id_surat . '&hash=' . $hash;
 
         try {
             $qrCode = Endroid\QrCode\Builder\Builder::create()
@@ -316,7 +316,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 
         // Generate QR code yang mengarah ke halaman verifikasi dengan validasi
         $hash = hash('sha256', $id_surat . QR_SECRET);
-        $qrData = 'http://' . $_SERVER['HTTP_HOST'] . '/bebas_pustaka/verifikasi_surat.php?id=' . $id_surat . '&hash=' . $hash;
+        $qrData = BASE_URL . '/verifikasi_surat.php?id=' . $id_surat . '&hash=' . $hash;
 
         try {
             $qrCode = Endroid\QrCode\Builder\Builder::create()
