@@ -37,13 +37,28 @@ function verifyCSRFToken($token) {
     return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
 }
 
-// Base URL untuk aplikasi (sesuaikan dengan instalasi Anda)
+// Base URL untuk aplikasi (auto-detect installation path)
 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
 $host = $_SERVER['HTTP_HOST'];
 $scriptName = $_SERVER['SCRIPT_NAME'];
-$basePath = str_replace('/index.php', '', $scriptName);
-$basePath = str_replace('/admin/', '', $basePath);
-$basePath = str_replace('/config.php', '', $basePath);
+
+// Get the directory path of the current script
+$scriptDir = dirname($scriptName);
+
+// Remove '/admin' if present (for admin pages)
+if (strpos($scriptDir, '/admin') !== false) {
+    $basePath = str_replace('/admin', '', $scriptDir);
+} else {
+    $basePath = $scriptDir;
+}
+
+// Ensure we don't have double slashes or incorrect paths
+$basePath = rtrim($basePath, '/');
+
+// If basePath is empty or just '/', set it to empty string
+if ($basePath === '/' || $basePath === '') {
+    $basePath = '';
+}
 
 define('BASE_URL', $protocol . '://' . $host . $basePath);
 
