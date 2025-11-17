@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Menyembunyikan ekstensi .php dari URL
+# Jika file tanpa ekstensi diminta dan file .php dengan nama sama ada, serve file .php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+# Opsional: Redirect URL dengan .php ke tanpa .php untuk konsistensi
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.php\ HTTP
+RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
